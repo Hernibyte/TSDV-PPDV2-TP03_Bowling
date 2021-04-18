@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Try: {fileID: 459747337}
+  Points: {fileID: 51524204}
+  Finish: {fileID: 1088680445}
 --- !u!1 &51524202
 GameObject:
   m_ObjectHideFlags: 0
