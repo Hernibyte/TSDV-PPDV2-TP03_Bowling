@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject ball;
     private Ball ballScript;
-    public static int Score { set;  get; }
     private float timer;
     public static int fails { set;  get; }
     private bool failCountFix = true;
@@ -26,9 +26,13 @@ public class GameManager : MonoBehaviour
             SetActiveGame();
         }
 
-        if (ballScript.shoot && Score < 80 && fails != 0)
+        if (ballScript.shoot && ConstData.Score < 80 && fails != 0)
         {
             ResetShoot();
+        } 
+        if (ConstData.Score == 80 || fails == 0)
+        {
+            SceneManager.LoadScene("EndGameScreen");
         }
     }
 
@@ -64,6 +68,6 @@ public class GameManager : MonoBehaviour
 
     public static void addToScore(int _score)
     {
-        Score += _score;
+        ConstData.Score += _score;
     }
 }
