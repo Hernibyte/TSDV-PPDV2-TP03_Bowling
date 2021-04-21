@@ -25,4 +25,14 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Game02");
     }
+
+    public void creditsButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void menuAccess()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
