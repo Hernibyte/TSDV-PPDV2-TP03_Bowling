@@ -20,4 +20,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void newGamemodeButton()
+    {
+        SceneManager.LoadScene("Game02");
+    }
 }
