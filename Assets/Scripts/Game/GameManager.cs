@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         } 
         if (ConstData.Score == 80 || fails == 0)
         {
-            SceneManager.LoadScene("EndGameScreen");
+            EndGame();
         }
     }
 
@@ -69,5 +69,10 @@ public class GameManager : MonoBehaviour
     public static void addToScore(int _score)
     {
         ConstData.Score += _score;
+    }
+
+    public static void EndGame()
+    {
+        SceneManager.LoadScene("EndGameScreen");
     }
 }
