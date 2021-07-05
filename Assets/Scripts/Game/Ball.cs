@@ -13,15 +13,14 @@ public class Ball : MonoBehaviour
     private float timer = 0.0f;
     [SerializeField] private GameObject arrow;
 
-
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        timer += Time.deltaTime;
+        timer += 0.005f;
 
         if (!shoot)
         {

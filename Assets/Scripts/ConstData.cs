@@ -17,15 +17,4 @@ public class ConstData : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
 }
